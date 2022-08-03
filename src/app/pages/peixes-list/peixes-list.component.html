@@ -1,0 +1,35 @@
+<div class="card w-100 my-5">
+    <div class="card-body">
+      <h1 class="card-title text-center">Lista de Peixes</h1>
+      <button class="btn btn-success mb-4 float-end" routerLink="/Peixes">
+        Cadastrar Novo
+      </button>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Raca</th>
+            <th>Quantidade</th>
+            <th>Preco</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let peixe of peixes">
+            <td>{{ peixe.id }}</td>
+            <td>{{ peixe.name }}</td>
+            <td>{{ peixe.raca }}</td>
+            <td>{{ peixe.quantidade }}</td>
+            <td>{{ peixe.preco }}</td>
+            <td>
+              <button class="btn btn-primary" [routerLink]="['/Peixes', peixe.id]">Editar</button>
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="deletePeixe(peixe.id)">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

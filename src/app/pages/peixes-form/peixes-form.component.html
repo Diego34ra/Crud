@@ -1,0 +1,41 @@
+<div class="card w-100 my-5">
+    <div class="card-body">
+      <h1 class="card-title text-center">Formulário de Peixes</h1>
+      <form [formGroup]="userForm">
+        <div class="row my-4">
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" formControlName="name" id="name" placeholder="Digite o seu nome">
+              <label for="name">Nome</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" formControlName="raca" id="raca" placeholder="Digite a raça">
+              <label for="raca">Raça</label>
+            </div>
+          </div>
+        </div>
+        <div class="row my-4">
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" formControlName="quantidade" id="quantidade" placeholder="Digite a quantidade">
+              <label for="quantidade">Quantidade</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" formControlName="preco" id="preco" placeholder="Digite o seu preço">
+              <label for="preco">Preço</label>
+            </div>
+          </div>
+        </div>
+        <div class="row my-4">
+          <div class="form-group col-12 mt-4">
+            <button type="button" class="btn btn-outline-danger float-start">Cancelar</button>
+            <button type="button" class="btn btn-outline-success float-end" (click)="actionButton()">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
